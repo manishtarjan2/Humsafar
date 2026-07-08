@@ -173,14 +173,6 @@ const LIVE_ROOMS = ['Bunk Bed', 'Triple Sharing', 'Double Sharing', 'King / Coup
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [searchCity, setSearchCity] = useState('');
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % 3);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
 
   // Ad video configuration states
   const [adVideoUrl, setAdVideoUrl] = useState(() => {
